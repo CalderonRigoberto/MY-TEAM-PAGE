@@ -1,0 +1,152 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:root {
+    --font-tittle: "PT Serif", serif;
+    --font-w-tittle: 700;
+    --font-h-primary: "Poppins", sans-serif;
+    --font-hp-w: 600;
+    --font-text: "Poppins", sans-serif;
+    --font-text-w: 400;
+    --font-name-worker: "Poppins", sans-serif;
+    --font-name-w: 600;
+    --font-position: "PT Serif", serif;
+    --font-position-w: 400;
+
+
+    /*Colors*/
+    --text-black: #0000;
+
+    /*Text sizes*/
+    --text-tittle: 2.25rem;
+    --text-primary-tittle: 1.125rem;
+    --text-p: 1.125rem;
+    --text-position: 0.75rem;
+    --text-name: 1.125rem;
+
+}
+
+.header {
+    max-width: 900px;
+    width: 100%;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header .header__tittle h1 {
+    font-family: var(--font-tittle);
+    font-weight: var(--font-w-tittle);
+    font-size: var(--text-tittle);
+}
+
+.header .header__texts p span {
+    font-family: var(--font-h-primary);
+    font-weight: var(--font-hp-w);
+    font-size: var(--text-primary-tittle);
+}
+
+.header .header__texts p {
+    font-family: var(--font-text);
+    font-weight: var(--font-text-w);
+    font-size: var(--text-p);
+}
+
+.header .header__tittle,
+.header__texts {
+    padding: 1rem;
+}
+
+.header__tittle {
+    width: 100%;
+}
+
+.header__texts {
+    max-width: 440px;
+    width: 100%;
+}
+
+@media (max-width: 640px) {
+    .header {
+        flex-direction: column;
+    }
+}
+
+/*TEAM SECTION*/
+.team {
+    max-width: 900px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    justify-items: center;
+}
+
+/*CARD COMPONENT STYLES*/
+
+.card {
+    width: 300px;
+}
+
+.card h2 {
+    font-family: var(--font-name-worker);
+    font-weight: var(--font-name-w);
+    font-size: var(--text-name);
+}
+
+.card__body {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.card__body img {
+    width: 238px;
+}
+
+.card__body p {
+    writing-mode: vertical-rl;
+    text-align: justify;
+    text-transform: uppercase;
+    font-family: var(--font-position);
+    font-weight: var(--font-position-w);
+    font-size: var(--text-position);
+}
+
+.mt {
+    margin-top: 4rem;
+}
+
+@media (max-width: 640px) {
+    .card {
+        width: 138px;
+    }
+
+    .card__body img {
+        width: 138px;
+    }
+
+    .team {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 2fr));
+    }
+}
+
+/*footer*/
+footer{
+    width: 100%;
+    margin: 0 auto;
+}
+footer p{
+    text-align: center;
+    color: #A9A9A9;
+    font-family: "Poppins",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+footer p a{
+    color: black;
+    text-decoration: underline;
+}
